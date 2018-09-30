@@ -1,5 +1,6 @@
 package com.kazale.pontointeligente.api.repositories;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 import org.junit.After;
@@ -39,6 +40,6 @@ public class EmpresaRepositoryTest {
 	@Test
 	public void testBuscarPorCnpj() {
 		Empresa empresa = this.empresaRepository.findByCnpj(CNPJ);
-		assertNotEquals(CNPJ, empresa.getCnpj());
+		assertEquals(CNPJ, empresa.getCnpj());
 	}
 }
